@@ -21,4 +21,6 @@ private:
 	FVector rule1(AAgent* boid);
 	FVector rule2(AAgent* boid);
 	FVector rule3(AAgent* boid);
+
+	void limitVelocity(AAgent* boid);
 };
