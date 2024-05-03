@@ -1,6 +1,6 @@
 # Agent-Based Simulation
 
-This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off of the Boids algorithm, this projects demonstrates flocking within Unreal Engine 5.2.1. For the Boids algorithm, I implemented rules 1-3 and the "Limiting the Speed" tweak. My gameplay video can be found at [Gameplay Video](../Boids%20Gameplay.mp4).
+This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off of the Boids algorithm, this projects demonstrates flocking within Unreal Engine 5.2.1. For the Boids algorithm, I implemented rules 1-3 and the "Limiting the Speed" tweak. My gameplay video can be found at [Gameplay Video](../Agent-Based-Simulation/blob/main/Boids%20Gameplay.mp4).
 
 ## Rule 1
 
@@ -11,7 +11,8 @@ This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off
             pc += currentBoid->GetActorLocation();
     }
     return (pc / (AGENT_COUNT - 1) - boid->GetActorLocation()) / 100;
-}```
+}
+```
 
 ## Rule 2
 
@@ -26,7 +27,8 @@ This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off
         }
     }
     return c;
-}```
+}
+```
 
 ## Rule 3
 
@@ -37,7 +39,8 @@ This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off
             pv += currentBoid->Velocity;
     }
     return ((pv / (AGENT_COUNT - 1)) - boid->Velocity) / 8;
-}```
+}
+```
 
 ## Limiting the Speed Tweak
 
@@ -45,4 +48,5 @@ This project is for WPI's IMGD 4000 Agent-Based Simulation assignment. Based off
     float limit = 500.f;
     if (abs((int32)boid->Velocity.Size()) > limit)
         boid->Velocity = (boid->Velocity / abs((int32)boid->Velocity.Size())) * limit;
-}```
+}
+```
